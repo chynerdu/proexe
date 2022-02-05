@@ -44,6 +44,10 @@
   margin-top: 72px;
 }
 
+.mr-30 {
+  margin-right: 30px;
+}
+
 .lds-spinner {
   color: official;
   display: inline-block;

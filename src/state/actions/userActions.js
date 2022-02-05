@@ -49,4 +49,16 @@ export const createUser = (payload) => async(dispatch) => {
         } catch (e) {
             console.log('error ', e)
         }
+
+
  }
+
+
+ export const sortAscending = () => async(dispatch) => {
+    dispatch({type: types.SORT_ASCENDING})
+}
+
+
+export const sortDescending = () => async(dispatch) => {
+    dispatch({type: types.SORT_DESCENDING})
+}

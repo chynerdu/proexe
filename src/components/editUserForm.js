@@ -9,7 +9,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { useUserHook } from '../hooks/useUserHook';
 import { editUser } from "../state/actions/userActions";
-
+import {Link} from 'react-router-dom'
 
 
 export default function EditUserForm(props) {
@@ -39,20 +39,6 @@ console.log('user in username ', name)
   const {editHandler} = useUserHook({}, userList);
   
 
-  // // get userlist in order to push new user object to state since we are not calling any API
-  //   const getUserList = async() => {
-  //       try {
-  //         const data =   await getUsers(userList)(dispatch)
-  //       } catch(e) {
-  //           console.log('error ', e)
-  //       }
-  //   }
-
-  //   useEffect(() =>{
-  //       getUserList()
-  //   },[])
-  //   const dispatch = useDispatch();
-
   function submit(e) {
     try {
    const payload = {...props.user, name,
@@ -73,7 +59,7 @@ console.log('user in username ', name)
        <MDBCol  className='shadow-2 p-30' >
       < div  >
          <div className='d-flex flex-row-reverse mb-30'>
-         <MDBBtn outline color="danger">Cancel</MDBBtn>
+         <MDBBtn outline color="danger"><Link to="/">Cancel</Link></MDBBtn>
          </div>
          </div>
     <form  onSubmit={(e) => submit(e)}> 

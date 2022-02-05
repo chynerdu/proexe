@@ -9,6 +9,7 @@ import Loader from "../../components/loader"
 function UserList() {
     const userList = useSelector((state) => state.users.userList)
     const isFetching = useSelector((state) => state.isFetching)
+    
 
     console.log('user list in state ', userList)
     const getUserList = async() => {
@@ -30,14 +31,16 @@ function UserList() {
     //     return <div className="mt-72"><Loader/></div>
       
     // }
+
+   
    
     
     return <div>
        <MDBContainer >
         <MDBRow className='g-5'>
-       <MDBCol md="8" offsetMd="2" >
+       <MDBCol md="10" offsetMd="1" >
         <div className="mt-72 d-flex justify-content-between">
-            <h3>User List {isFetching}</h3>
+            <h3>User List</h3>
            <Link to="/create-user"> <MDBBtn>Create user</MDBBtn></Link>
 
         </div>

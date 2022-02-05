@@ -8,7 +8,7 @@ import { MDBTable, MDBTableHead, MDBBtn, MDBTableBody, MDBModal,
   MDBModalFooter, } from 'mdb-react-ui-kit';
   import { useNavigate } from "react-router-dom";
   import { useDispatch } from 'react-redux';
-  import { deleteUserAction } from "../state/actions/userActions";
+  import { deleteUserAction, sortAscending, sortDescending } from "../state/actions/userActions";
 
 export default function UserTable(props) {
   const dispatch = useDispatch()
@@ -30,11 +30,21 @@ export default function UserTable(props) {
     
   }
 
+  function sort(drl) {
+
+   drl == 1 ?  sortAscending()(dispatch) : sortDescending()(dispatch)
+}
+
   return (
     <div className="mt-30">
 
- 
-    <MDBTable className='table-bordered' >
+<div className="mt-72 d-flex ">
+          
+          <MDBBtn className="mr-30" size= "sm" color="success" onClick= {() => sort(1)}>Sort a - z</MDBBtn>
+          <MDBBtn size= "sm" color= "dark" onClick= {() => sort(0)}>Sort z - a</MDBBtn>
+
+        </div>
+    <MDBTable className='mt-30 table-bordered' >
       <MDBTableHead>
         <tr>
           <th scope='col'>Id</th>

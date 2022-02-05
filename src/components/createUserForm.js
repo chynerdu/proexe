@@ -10,6 +10,7 @@ import {
 import { useUserHook } from '../hooks/useUserHook';
 import { createUser, getUsers } from "../state/actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
+import {Link} from 'react-router-dom'
 
 const initialValues = {
   name: null,
@@ -42,7 +43,7 @@ export default function CreateUserForm() {
        <MDBCol  className='shadow-2 p-30' >
       < div  >
          <div className='d-flex flex-row-reverse mb-30'>
-         <MDBBtn outline color="danger">Cancel</MDBBtn>
+         <MDBBtn outline color="danger"><Link to="/">Cancel</Link></MDBBtn>
          </div>
          </div>
     <form  onSubmit={(e) => submitHandler(e, createUser)}> 
