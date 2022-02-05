@@ -46,10 +46,7 @@ export default function App() {
             
           </MDBNavbarNav>
 
-          {/* <form className='d-flex input-group w-auto'>
-            <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
-            <MDBBtn color='primary'>Search</MDBBtn>
-          </form> */}
+         
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
